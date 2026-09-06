@@ -1,0 +1,141 @@
+/* ==========================================================================
+   Base setup
+   ========================================================================== */
+
+body {
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  color: #222222;
+  background-color: #f7f7f5;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Reusable width wrapper shared by header, footer, and main so their
+   content lines up even when header/footer backgrounds span full width. */
+.content-width {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+}
+
+/* ==========================================================================
+   Header / navigation
+   ========================================================================== */
+
+header {
+  background-color: #13294b;
+  color: #ffffff;
+}
+
+.header-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.site-name {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.site-name a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-left: 1rem;
+  padding: 0.35rem 0.6rem;
+  border-radius: 4px;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: #ffffff;
+  color: #13294b;
+  outline: none;
+}
+
+/* ==========================================================================
+   Headings and body text
+   ========================================================================== */
+
+h1 {
+  font-size: 2rem;
+  color: #13294b;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+h2 {
+  font-size: 1.4rem;
+  color: #13294b;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 2px solid #d10a0a;
+}
+
+h3 {
+  margin-top: 0;
+  color: #13294b;
+}
+
+p {
+  margin: 0 0 1rem 0;
+}
+
+/* ==========================================================================
+   Quarterback cards
+   ========================================================================== */
+
+.item-card {
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.item-card p:last-child {
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   Images
+   ========================================================================== */
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.featured-img {
+  display: block;
+  max-width: 400px;
+  margin: 1.5rem auto;
+  border-radius: 8px;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+footer {
+  background-color: #13294b;
+  color: #ffffff;
+  margin-top: 2rem;
+}
+
+footer p {
+  margin: 0;
+  text-align: center;
+  font-size: 0.9rem;
+}
