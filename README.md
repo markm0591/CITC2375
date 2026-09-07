@@ -18,7 +18,6 @@ QB descriptors.
 - possible later ranking?
 - maybe somehow keep up with fantasy points?
 
-
 Images sourced:
 C:\Users\grand\OneDrive\Desktop\CITC2375\client\images\footballinfield.jpg
 https://unsplash.com/photos/brown-and-black-wilson-football--nATH0CrkMU
@@ -26,4 +25,4 @@ https://unsplash.com/photos/brown-and-black-wilson-football--nATH0CrkMU
 ## Project Progress
 
 ### Week 3
-Added a shared external stylesheet (`client/css/styles.css`) linked from every page. Built a consistent site header and footer with shared branding and navigation, moved each page's `h1` into `main`, and added reusable `.content-width` and `.item-card` classes so the overall layout and the quarterback cards share consistent spacing, borders, and hierarchy. Styled navigation links with visible hover/focus states and constrained images so they no longer overflow their containers.
+Added a css style sheet and linked all current pages. Created header/footer styling with nav. Organized main. Add styling for cards including a hover effect I like. Will probably add this effect to anything that is clickable in the future. (Nav, Links, Player Cards). I still have this image in there of the football in the field, it doesn't realy have much use though. So will probably replace it later.

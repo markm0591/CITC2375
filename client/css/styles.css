@@ -1,30 +1,21 @@
-/* ==========================================================================
-   Base setup
-   ========================================================================== */
-
 body {
-  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
-  color: #222222;
-  background-color: #f7f7f5;
+  font-family: Arial, sans-serif;
   line-height: 1.6;
+  background-color: #0e0d0d;
+  color: #36eb30;
   margin: 0;
 }
 
-/* Reusable width wrapper shared by header, footer, and main so their
-   content lines up even when header/footer backgrounds span full width. */
 .content-width {
   max-width: 900px;
   margin: 0 auto;
   padding: 1rem 1.5rem;
 }
 
-/* ==========================================================================
-   Header / navigation
-   ========================================================================== */
 
 header {
-  background-color: #13294b;
-  color: #ffffff;
+  background-color: #0e0d0d;
+  color: #36eb30;
 }
 
 .header-inner {
@@ -42,12 +33,12 @@ header {
 }
 
 .site-name a {
-  color: #ffffff;
+  color: #36eb30;
   text-decoration: none;
 }
 
 nav a {
-  color: #ffffff;
+  color: #36eb30;
   text-decoration: none;
   margin-left: 1rem;
   padding: 0.35rem 0.6rem;
@@ -57,25 +48,24 @@ nav a {
 
 nav a:hover,
 nav a:focus {
-  background-color: #ffffff;
-  color: #13294b;
+  background-color: #0e0d0d;
+  color: #36eb30;
   outline: none;
+  text-decoration: underline;
+  text-decoration-color: #36eb30;
 }
 
-/* ==========================================================================
-   Headings and body text
-   ========================================================================== */
 
 h1 {
   font-size: 2rem;
-  color: #13294b;
+  color: #36eb30;
   margin-top: 1.5rem;
   margin-bottom: 0.75rem;
 }
 
 h2 {
   font-size: 1.4rem;
-  color: #13294b;
+  color: #36eb30;
   margin-top: 2rem;
   margin-bottom: 0.75rem;
   padding-bottom: 0.25rem;
@@ -84,33 +74,74 @@ h2 {
 
 h3 {
   margin-top: 0;
-  color: #13294b;
+  margin-bottom: -.50rem;
+  color: #36eb30;
 }
 
-p {
-  margin: 0 0 1rem 0;
-}
 
-/* ==========================================================================
-   Quarterback cards
-   ========================================================================== */
+.player-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
 
 .item-card {
-  background-color: #ffffff;
-  border: 1px solid #dddddd;
-  border-radius: 8px;
+  background-color: #0e0d0d;
+  color:#36eb30;
+  border: 1px solid #36eb30;
+  border-radius: 12px;
   padding: 1rem 1.25rem;
-  margin-bottom: 1rem;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 1px 3px #36eb30;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.item-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 25px #36eb30;
+}
+
+.item-card p {
+  margin: 0 0 0.25rem 0;
 }
 
 .item-card p:last-child {
   margin-bottom: 0;
 }
 
-/* ==========================================================================
-   Images
-   ========================================================================== */
+.item-card .team {
+  font-size: 0.95rem;
+  opacity: 0.85;
+  margin-bottom: 0.5rem;
+}
+
+.item-card .season-line {
+  font-size: 0.85rem;
+  opacity: 0.85;
+  margin-bottom: 0.5rem;
+}
+
+.stat-list {
+  list-style: none;
+  font-size: 0.85rem;
+  margin: 0.5rem 0;
+  padding: 0.5rem 0;
+  border-top: 1px solid #36eb30;
+  border-bottom: 1px solid #36eb30;
+}
+
+.stat-list li {
+  margin-bottom: 0.05rem;
+}
+
+.stat-list li:last-child {
+  margin-bottom: 0;
+}
+
+.item-card .rating {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
 
 img {
   max-width: 100%;
@@ -124,13 +155,9 @@ img {
   border-radius: 8px;
 }
 
-/* ==========================================================================
-   Footer
-   ========================================================================== */
-
 footer {
-  background-color: #13294b;
-  color: #ffffff;
+  background-color: #0e0d0d;
+  color: #36eb30;
   margin-top: 2rem;
 }
 
