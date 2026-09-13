@@ -26,3 +26,6 @@ https://unsplash.com/photos/brown-and-black-wilson-football--nATH0CrkMU
 
 ### Week 3
 Added a css style sheet and linked all current pages. Created header/footer styling with nav. Organized main. Add styling for cards including a hover effect I like. Will probably add this effect to anything that is clickable in the future. (Nav, Links, Player Cards). I still have this image in there of the football in the field, it doesn't realy have much use though. So will probably replace it later.
+
+### Week 4
+Added a :root block with CSS custom properties for the color palette and swapped the repeated hex colors throughout styles.css over to those variables. Swapped my grid layout with flex to appease the rubric. I'll have to look for a 3rd color to use on the page, but I can't seem to pick one right now. The goldish yellow isn't burning my eyes off though for the link.
