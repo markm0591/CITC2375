@@ -29,3 +29,6 @@ Added a css style sheet and linked all current pages. Created header/footer styl
 
 ### Week 4
 Added a :root block with CSS custom properties for the color palette and swapped the repeated hex colors throughout styles.css over to those variables. Swapped my grid layout with flex to appease the rubric. I'll have to look for a 3rd color to use on the page, but I can't seem to pick one right now. The goldish yellow isn't burning my eyes off though for the link.
+
+### Week 5
+Added add.html with a form for adding a quarterback to the tracker (name, team, passing yards, touchdowns, interceptions, passer rating, and an optional notes field), using a select for team and number inputs for the rest. Added an Add link to the nav on all three pages. I hadn't planned on adding QBs through a form previously. I didn't realize this would be part of the project, so will probably have to audible to another design idea as the next assignments require different rubric requirements.
