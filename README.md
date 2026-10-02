@@ -32,3 +32,6 @@ Added a :root block with CSS custom properties for the color palette and swapped
 
 ### Week 5
 Added add.html with a form for adding a quarterback to the tracker (name, team, passing yards, touchdowns, interceptions, passer rating, and an optional notes field), using a select for team and number inputs for the rest. Added an Add link to the nav on all three pages. I hadn't planned on adding QBs through a form previously. I didn't realize this would be part of the project, so will probably have to audible to another design idea as the next assignments require different rubric requirements.
+
+### Week 6
+Added client/js/app.js and linked it at the end of the body on index.html. Created const variables (title, sample quarterback count, top rating, a boolean for whether that rating counts as elite), a calculation for the average passer rating across the sample quarterbacks listed. Added an if/else that checks whether there are at least 3 quarterbacks tracked and logs a different message either way. I just hard coded the sample ratings for now, I imagine we will be doing more with this later.
