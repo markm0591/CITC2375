@@ -1,18 +1,20 @@
 const projectTitle = "Top NFL Quarterbacks Tracker";
-const sampleItemCount = 3;
-const topRating = 102.2;
-const hasEliteRating = topRating >= 100;
 
-const averageRating = (100.8 + 94.4 + 102.2) / 3;
+const featuredItem = getItemById(2);
+console.log(`Featured quarterback: ${featuredItem.name} (${featuredItem.team}).`);
 
-const summary = `${projectTitle} is tracking ${sampleItemCount} quarterbacks with an average passer rating of ${averageRating.toFixed(1)}.`;
+const teamMatches = getItemsByCategory("Baltimore Ravens");
+console.log(`Found ${teamMatches.length} quarterback(s) for Baltimore Ravens.`);
 
+const averageRating = getAverageRating();
+const summary = `${projectTitle} is tracking ${items.length} quarterbacks with an average passer rating of ${averageRating.toFixed(1)}.`;
 console.log(summary);
-console.log(`Average passer rating: ${averageRating.toFixed(1)}`);
-console.log(`Is the top rating elite (100+)? ${hasEliteRating}`);
 
-if (sampleItemCount >= 3) {
-  console.log(`There are ${sampleItemCount} quarterbacks tracked.`);
+const hasEliteRating = featuredItem.passerRating >= 100;
+console.log(`Is ${featuredItem.name}'s rating elite (100+)? ${hasEliteRating}`);
+
+if (items.length >= 3) {
+  console.log(`There are ${items.length} quarterbacks tracked.`);
 } else {
-  console.log(`Only ${sampleItemCount} quarterback(s) tracked. Add more to start comparing.`);
+  console.log(`Only ${items.length} quarterback(s) tracked. Add more to start comparing.`);
 }

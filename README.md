@@ -11,7 +11,7 @@ Top NFL Quarterbacks Tracker
 QB descriptors.
 - name
 - team
-- passingYards
+- description
 - touchdowns
 - interceptions
 - passerRating
@@ -35,3 +35,6 @@ Added add.html with a form for adding a quarterback to the tracker (name, team, 
 
 ### Week 6
 Added client/js/app.js and linked it at the end of the body on index.html. Created const variables (title, sample quarterback count, top rating, a boolean for whether that rating counts as elite), a calculation for the average passer rating across the sample quarterbacks listed. Added an if/else that checks whether there are at least 3 quarterbacks tracked and logs a different message either way. I just hard coded the sample ratings for now, I imagine we will be doing more with this later.
+
+### Week 7
+Added client/js/data.js with a real items array of 6 quarterback objects, replacing hard-coded numbers from last week. Each item has the same fields (id, name, team, description, passingYards, touchdowns, interceptions, passerRating). Added getItemById, getItemsByCategory, and getAverageRating functions, with getItemsByCategory using filter. 
