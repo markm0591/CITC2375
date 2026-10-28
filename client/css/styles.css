@@ -3,6 +3,11 @@
   --color-background: #191b18;
   --color-text: #36eb30;
   --color-accent: #f5c542;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
 }
 
 * {
@@ -24,7 +29,7 @@ a {
 .content-width {
   max-width: 900px;
   margin: 0 auto;
-  padding: 1rem 1.5rem;
+  padding: var(--space-md) var(--space-lg);
 }
 
 header {
@@ -36,7 +41,7 @@ header {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 0.5rem;
+  gap: var(--space-xs);
 }
 
 .site-name {
@@ -54,7 +59,7 @@ nav {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 0.75rem;
+  gap: var(--space-sm);
 }
 
 nav a {
@@ -76,14 +81,14 @@ nav a:focus {
 h1 {
   font-size: 2rem;
   color: var(--color-accent);
-  margin-top: 1.5rem;
-  margin-bottom: 0.75rem;
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-sm);
 }
 
 h2 {
   font-size: 1.4rem;
-  margin-top: 2rem;
-  margin-bottom: 0.75rem;
+  margin-top: var(--space-xl);
+  margin-bottom: var(--space-sm);
   padding-bottom: 0.25rem;
   border-bottom: 2px solid var(--color-accent);
 }
@@ -94,14 +99,13 @@ h3 {
 }
 
 .player-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--space-md);
+  align-items: start;
 }
 
 .item-card {
-  flex: 1 1 220px;
-  min-width: 220px;
   background-color: var(--color-surface);
   border: 1px solid var(--color-text);
   border-radius: 12px;
@@ -126,20 +130,20 @@ h3 {
 .item-card .team {
   font-size: 0.95rem;
   opacity: 0.85;
-  margin-bottom: 0.5rem;
+  margin-bottom: var(--space-xs);
 }
 
 .item-card .season-line {
   font-size: 0.85rem;
   opacity: 0.85;
-  margin-bottom: 0.5rem;
+  margin-bottom: var(--space-xs);
 }
 
 .stat-list {
   list-style: none;
   font-size: 0.85rem;
-  margin: 0.5rem 0;
-  padding: 0.5rem 0;
+  margin: var(--space-xs) 0;
+  padding: var(--space-xs) 0;
   border-top: 1px solid var(--color-text);
   border-bottom: 1px solid var(--color-text);
 }
@@ -154,7 +158,7 @@ h3 {
 
 .item-card .rating {
   font-size: 0.9rem;
-  margin-top: 0.5rem;
+  margin-top: var(--space-xs);
 }
 
 img {
@@ -164,14 +168,15 @@ img {
 
 .featured-img {
   display: block;
+  width: 100%;
   max-width: 400px;
-  margin: 1.5rem auto;
+  margin: var(--space-lg) auto;
   border-radius: 8px;
 }
 
 footer {
   background-color: var(--color-background);
-  margin-top: 2rem;
+  margin-top: var(--space-xl);
 }
 
 footer p {
@@ -181,7 +186,7 @@ footer p {
 }
 
 .add-form {
-  margin-top: 1.5rem;
+  margin-top: var(--space-lg);
   max-width: 500px;
 }
 
@@ -201,7 +206,7 @@ footer p {
 .add-form textarea {
   font-family: inherit;
   font-size: 1rem;
-  padding: 0.5rem 0.75rem;
+  padding: var(--space-xs) var(--space-sm);
   border-radius: 6px;
   border: 1px solid var(--color-text);
   background-color: var(--color-surface);
@@ -220,8 +225,8 @@ footer p {
 }
 
 .add-form button {
-  margin-top: 0.5rem;
-  padding: 0.6rem 1.5rem;
+  margin-top: var(--space-xs);
+  padding: 0.6rem var(--space-lg);
   background-color: var(--color-accent);
   color: var(--color-background);
   border: none;
@@ -241,14 +246,14 @@ table {
   border-collapse: collapse;
   width: 100%;
   max-width: 600px;
-  margin: 1rem 0 2rem;
+  margin: var(--space-md) 0 var(--space-xl);
 }
 
 caption {
   text-align: left;
   font-size: 0.9rem;
   opacity: 0.85;
-  margin-bottom: 0.5rem;
+  margin-bottom: var(--space-xs);
 }
 
 th,

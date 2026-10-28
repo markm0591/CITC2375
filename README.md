@@ -38,3 +38,6 @@ Added client/js/app.js and linked it at the end of the body on index.html. Creat
 
 ### Week 7
 Added client/js/data.js with a real items array of 6 quarterback objects, replacing hard-coded numbers from last week. Each item has the same fields (id, name, team, description, passingYards, touchdowns, interceptions, passerRating). Added getItemById, getItemsByCategory, and getAverageRating functions, with getItemsByCategory using filter. 
+
+### Week 8
+Switched .player-grid to CSS Grid. Columns running autofit and minmax. added gap: var(--space-md) to space evenly.Grid property of align-items: start added. Checked all sizes, seems good. Added a small spacing scale to :root to use. I used grid on the player cards because It's what I had originally and can make modifications to both columns and rows. I think I'm going to try to make a pyramid at some point ranked on their AVG fantasy points later. I imagine I would have to use Grid on that anyway.
