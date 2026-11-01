@@ -1,20 +1,48 @@
-const projectTitle = "Top NFL Quarterbacks Tracker";
+const itemList = document.querySelector("#item-list");
+const teamFilter = document.querySelector("#team-filter");
 
-const featuredItem = getItemById(2);
-console.log(`Featured quarterback: ${featuredItem.name} (${featuredItem.team}).`);
+let favoriteIds = JSON.parse(localStorage.getItem("favoriteItemIds")) || [];
 
-const teamMatches = getItemsByCategory("Baltimore Ravens");
-console.log(`Found ${teamMatches.length} quarterback(s) for Baltimore Ravens.`);
-
-const averageRating = getAverageRating();
-const summary = `${projectTitle} is tracking ${items.length} quarterbacks with an average passer rating of ${averageRating.toFixed(1)}.`;
-console.log(summary);
-
-const hasEliteRating = featuredItem.passerRating >= 100;
-console.log(`Is ${featuredItem.name}'s rating elite (100+)? ${hasEliteRating}`);
-
-if (items.length >= 3) {
-  console.log(`There are ${items.length} quarterbacks tracked.`);
-} else {
-  console.log(`Only ${items.length} quarterback(s) tracked. Add more to start comparing.`);
+function renderItems(itemsToRender) {
+  itemList.innerHTML = "";
+  itemsToRender.forEach((item) => {
+    const card = document.createElement("article");
+    const isFavorite = favoriteIds.includes(item.id);
+    card.className = "item-card";
+    card.innerHTML = `
+      <h3>${item.name}</h3>
+      <p class="team">${item.team}</p>
+      <p class="season-line">${item.description}</p>
+        <ul class="stat-list">
+          <li>${item.passingYards} Pass Yds</li>
+          <li>${item.touchdowns} TD</li>
+          <li>${item.interceptions} Int</li>
+        </ul>
+      <p class="rating">Rating: ${item.passerRating}</p>
+      <button class="favorite-btn${isFavorite ? " is-favorite" : ""}" data-id="${item.id}">${isFavorite ? "★ Favorited" : "☆ Favorite"}</button>
+    `;
+    itemList.appendChild(card);
+  });
 }
+
+renderItems(items);
+
+teamFilter.addEventListener("change", () => {
+  const team = teamFilter.value;
+  renderItems(team === "all" ? items : getItemsByCategory(team));
+});
+
+itemList.addEventListener("click", (event) => {
+  if (!event.target.classList.contains("favorite-btn")) {
+    return;
+  }
+  const id = Number(event.target.dataset.id);
+  if (favoriteIds.includes(id)) {
+    favoriteIds = favoriteIds.filter((favId) => favId !== id);
+  } else {
+    favoriteIds.push(id);
+  }
+  localStorage.setItem("favoriteItemIds", JSON.stringify(favoriteIds));
+  event.target.classList.toggle("is-favorite");
+  event.target.textContent = favoriteIds.includes(id) ? "★ Favorited" : "☆ Favorite";
+});

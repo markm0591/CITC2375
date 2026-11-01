@@ -51,7 +51,6 @@ header {
 }
 
 .site-name a {
-  color: var(--color-text);
   text-decoration: none;
 }
 
@@ -68,7 +67,7 @@ nav a {
   border-radius: 4px;
   transition: background-color 0.15s ease, color 0.15s ease;
 }
-
+a:hover,
 nav a:hover,
 nav a:focus {
   background-color: var(--color-background);
@@ -95,28 +94,30 @@ h2 {
 
 h3 {
   margin-top: 0;
-  margin-bottom: -.50rem;
+  margin-bottom: var(--space-xs);
+  color: var(--color-accent);
 }
 
 .player-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: var(--space-md);
+  /* TODO:Change to stretch later, this looks silly when opened wide. */
   align-items: start;
 }
 
 .item-card {
   background-color: var(--color-surface);
-  border: 1px solid var(--color-text);
+  border: 1px solid var(--color-accent);
   border-radius: 12px;
   padding: 1rem 1.25rem;
-  box-shadow: 0 1px 3px var(--color-text);
+  box-shadow: 0 1px 3px var(--color-accent);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .item-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 0 25px var(--color-text);
+  box-shadow: 0 0 25px var(--color-accent);
 }
 
 .item-card p {
@@ -158,6 +159,7 @@ h3 {
 
 .item-card .rating {
   font-size: 0.9rem;
+  color: var(--color-text);
   margin-top: var(--space-xs);
 }
 
@@ -266,4 +268,35 @@ td {
 thead th,
 tbody th {
   background-color: var(--color-surface);
+}
+
+
+.add-form input,
+.add-form select,
+.add-form textarea,
+#team-filter {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: var(--space-xs) var(--space-sm);
+  margin-bottom: var(--space-sm);
+  border-radius: 6px;
+  border: 1px solid var(--color-accent);
+  background-color: var(--color-surface);
+  color: var(--color-text);
+}
+
+.favorite-btn {
+  margin-top: var(--space-xs);
+  padding: 0.3rem 0.6rem;
+  background-color: transparent;
+  color: var(--color-accent);
+  border: 1px solid var(--color-accent);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.favorite-btn.is-favorite {
+  background-color: var(--color-accent);
+  color: var(--color-background);
+  border-color: var(--color-accent);
 }
