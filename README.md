@@ -44,3 +44,6 @@ Switched .player-grid to CSS Grid. Columns running autofit and minmax. added gap
 
 ### Week 9
 Updated colors finally. Index hard code removed, pulls from data.js now., Filter control added, favorite button added. Should save on refreshes.
+
+### Week 10
+Migrated the frontend to React with Vite. Old static site kept as client-static for reference, new client app built with Header/ItemList/ItemCard components.

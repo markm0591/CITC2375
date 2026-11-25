@@ -1,0 +1,302 @@
+:root {
+  --color-surface: #0e0d0d;
+  --color-background: #191b18;
+  --color-text: #36eb30;
+  --color-accent: #f5c542;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  margin: 0;
+}
+
+a {
+  color: var(--color-accent);
+}
+
+.content-width {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: var(--space-md) var(--space-lg);
+}
+
+header {
+  background-color: var(--color-background);
+}
+
+.header-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-xs);
+}
+
+.site-name {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.site-name a {
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+nav a {
+  text-decoration: none;
+  padding: 0.35rem 0.6rem;
+  border-radius: 4px;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+a:hover,
+nav a:hover,
+nav a:focus {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  outline: none;
+  text-decoration: underline;
+  text-decoration-color: var(--color-text);
+}
+
+h1 {
+  font-size: 2rem;
+  color: var(--color-accent);
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-sm);
+}
+
+h2 {
+  font-size: 1.4rem;
+  margin-top: var(--space-xl);
+  margin-bottom: var(--space-sm);
+  padding-bottom: 0.25rem;
+  border-bottom: 2px solid var(--color-accent);
+}
+
+h3 {
+  margin-top: 0;
+  margin-bottom: var(--space-xs);
+  color: var(--color-accent);
+}
+
+.player-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--space-md);
+  /* TODO:Change to stretch later, this looks silly when opened wide. */
+  align-items: start;
+}
+
+.item-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-accent);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  box-shadow: 0 1px 3px var(--color-accent);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.item-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 25px var(--color-accent);
+}
+
+.item-card p {
+  margin: 0 0 0.25rem 0;
+}
+
+.item-card p:last-child {
+  margin-bottom: 0;
+}
+
+.item-card .team {
+  font-size: 0.95rem;
+  opacity: 0.85;
+  margin-bottom: var(--space-xs);
+}
+
+.item-card .season-line {
+  font-size: 0.85rem;
+  opacity: 0.85;
+  margin-bottom: var(--space-xs);
+}
+
+.stat-list {
+  list-style: none;
+  font-size: 0.85rem;
+  margin: var(--space-xs) 0;
+  padding: var(--space-xs) 0;
+  border-top: 1px solid var(--color-text);
+  border-bottom: 1px solid var(--color-text);
+}
+
+.stat-list li {
+  margin-bottom: 0.05rem;
+}
+
+.stat-list li:last-child {
+  margin-bottom: 0;
+}
+
+.item-card .rating {
+  font-size: 0.9rem;
+  color: var(--color-text);
+  margin-top: var(--space-xs);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.featured-img {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  margin: var(--space-lg) auto;
+  border-radius: 8px;
+}
+
+footer {
+  background-color: var(--color-background);
+  margin-top: var(--space-xl);
+}
+
+footer p {
+  margin: 0;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.add-form {
+  margin-top: var(--space-lg);
+  max-width: 500px;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.25rem;
+}
+
+.form-row label {
+  margin-bottom: 0.35rem;
+  font-weight: bold;
+}
+
+.add-form input,
+.add-form select,
+.add-form textarea {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: 6px;
+  border: 1px solid var(--color-text);
+  background-color: var(--color-surface);
+  color: var(--color-text);
+}
+
+.add-form textarea {
+  resize: vertical;
+}
+
+.add-form input:focus,
+.add-form select:focus,
+.add-form textarea:focus {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.add-form button {
+  margin-top: var(--space-xs);
+  padding: 0.6rem var(--space-lg);
+  background-color: var(--color-accent);
+  color: var(--color-background);
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+}
+
+.add-form button:hover,
+.add-form button:focus {
+  opacity: 0.85;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 600px;
+  margin: var(--space-md) 0 var(--space-xl);
+}
+
+caption {
+  text-align: left;
+  font-size: 0.9rem;
+  opacity: 0.85;
+  margin-bottom: var(--space-xs);
+}
+
+th,
+td {
+  border: 1px solid var(--color-text);
+  padding: 0.6rem 0.9rem;
+  text-align: left;
+}
+
+thead th,
+tbody th {
+  background-color: var(--color-surface);
+}
+
+
+.add-form input,
+.add-form select,
+.add-form textarea,
+#team-filter {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: var(--space-xs) var(--space-sm);
+  margin-bottom: var(--space-sm);
+  border-radius: 6px;
+  border: 1px solid var(--color-accent);
+  background-color: var(--color-surface);
+  color: var(--color-text);
+}
+
+.favorite-btn {
+  margin-top: var(--space-xs);
+  padding: 0.3rem 0.6rem;
+  background-color: transparent;
+  color: var(--color-accent);
+  border: 1px solid var(--color-accent);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.favorite-btn.is-favorite {
+  background-color: var(--color-accent);
+  color: var(--color-background);
+  border-color: var(--color-accent);
+}
